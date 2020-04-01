@@ -1,12 +1,16 @@
 {
   "name": "redux-template-generator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "prettier": "prettier --write './bin/**/*.js' --config ./.prettierrc"
   },
-  "keywords": [],
+  "keywords": [
+    "redux",
+    "redux-saga",
+    "typescript"
+  ],
   "author": "",
   "license": "MIT",
   "bin": {

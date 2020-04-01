@@ -56,7 +56,7 @@ It will generate (redux-saga is optional):
             - reducer.ts
             - types.ts
      |- /saga folder name / -
-        |- entity
+        |- /entity / -
             - index.ts
 ```
 
