@@ -7,16 +7,32 @@ This package will generated all redux flow with typescript.
 ## Installation
 
 ```sh
-# install
+# install globally
 npm install --global redux-template-generator
+
+# or locally
+npm install redux-template-generator
 ```
 
 ## Usage
 
+If you install package locally you need add new script to `scripts` field in `package.json`
+
+```json
+{
+  "scripts": {
+    "gen-redux": "node_modules/.bin/gen-redux"
+  }
+}
+```
+
 For init redux, in root directory of your project, run:
 
 ```sh
+# globally
 gen-redux init-redux
+# locally
+npm run gen-redux init-redux
 ```
 
 It will generate (redux-saga is optional):
@@ -42,7 +58,10 @@ It will generate (redux-saga is optional):
 For init some entity, in root directory of your project, run:
 
 ```sh
+# globally
 gen-redux init-entity
+# locally
+npm run gen-redux init-entity
 ```
 
 It will generate (redux-saga is optional):
