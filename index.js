@@ -25,7 +25,7 @@ const runScript = async (argv) => {
   const command = argv[0];
   switch (command) {
     case INIT_REDUX:
-      await initRedux(INIT_REDUX);
+      await initRedux(argv);
       break;
     case INIT_ENTITY:
       await initReduxEntity(argv);
