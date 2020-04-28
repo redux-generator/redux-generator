@@ -2,7 +2,7 @@
 
 Simple way for init redux code in your project. Includes redux-saga (optional).
 
-This package will generated all redux flow with typescript.
+This package will generated all redux flow with typescript(optional).
 
 ## Installation
 
@@ -28,6 +28,9 @@ If you install package locally you need add new script to `scripts` field in `pa
 
 For init redux, in root directory of your project, run:
 
+<details>
+    <summary>JavaScript only</summary>
+
 ```sh
 # globally
 gen-redux init-redux
@@ -38,24 +41,56 @@ npm run gen-redux init-redux
 It will generate (redux-saga is optional):
 
 ```sh
-  src -
-     |- /store folder name / -
-        |- authenticate
-            - actions.ts
-            - model.ts
-            - reducer.ts
-            - types.ts
-        - index.ts
-        - global-reducer.ts
-        - model.ts
-        - initial-store.ts
-     |- /saga folder name / -
-        |- authenticate
-            - index.ts
-        - index.ts
+store folder name /
+  ├─ authenticate /
+  │  ├─ actions.js
+  │  ├─ reducer.js
+  │  ├─ types.js
+  │  └─ saga.js
+  ├─ index.js
+  ├─ global-reducer.js
+  ├─ saga.js
+  └─ initial-store.js
+```
+</details>
+
+
+<details>
+    <summary>With Typescript</summary>
+
+```sh
+# globally
+gen-redux init-redux --ts or gen-redux init-redux --typescript
+# locally
+npm run gen-redux init-redux --ts or npm run gen-redux init-redux --typescript
 ```
 
+It will generate (redux-saga is optional):
+
+```sh
+store folder name /
+  ├─ authenticate /
+  │  ├─ actions.ts
+  │  ├─ reducer.ts
+  │  ├─ model.ts
+  │  ├─ types.ts
+  │  └─ saga.ts
+  ├─ index.ts
+  ├─ global-reducer.ts
+  ├─ model.ts
+  ├─ saga.ts
+  └─ initial-store.ts
+```
+</details>
+
+
+After just connect `authenticate/reducer` to `global-reducer`, and connect store itself to `Provider`.
+
+
 For init some entity, in root directory of your project, run:
+
+<details>
+    <summary>JavaScript only</summary>
 
 ```sh
 # globally
@@ -67,17 +102,38 @@ npm run gen-redux init-entity
 It will generate (redux-saga is optional):
 
 ```sh
-  src -
-     |- /store folder name / -
-        |- /entity / -
-            - actions.ts
-            - model.ts
-            - reducer.ts
-            - types.ts
-     |- /saga folder name / -
-        |- /entity / -
-            - index.ts
+folder name /
+  ├─ actions.js
+  ├─ reducer.js
+  ├─ types.js
+  └─ saga.js
 ```
+</details>
+
+
+<details>
+    <summary>With Typescript</summary>
+
+```sh
+# globally
+gen-redux init-entity --ts or gen-redux init-entity --typescript
+# locally
+npm run gen-redux init-entity --ts or npm run gen-redux init-entity --typescript
+```
+
+It will generate (redux-saga is optional):
+
+```sh
+folder name /
+  ├─ actions.ts
+  ├─ reducer.ts
+  ├─ types.ts
+	├─ model.ts
+  └─ saga.ts
+```
+</details>
+
+
 
 ## Contribute
 
