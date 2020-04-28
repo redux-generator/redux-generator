@@ -4,54 +4,22 @@ require('dotenv').config();
 const clear = require('clear');
 const path = require('path');
 
-const inquirer = require('./lib/inquirer');
-const { manager } = require('./lib/init-manager');
-const { entityManager } = require('./lib/init-entity-manager');
-const {
-  successMessageInConsole,
-  helpMessageInConsole,
-  errorMessageInConsole,
-} = require('./lib/utils');
+const { INIT_ENTITY, INIT_REDUX } = require('./lib/constants');
 
-const {
-  defaultStoreFolder,
-  defaultSagaFolder,
-  defaultSagaFolderEntity,
-  defaultStoreFolderEntity,
-} = require('./lib/constants');
+const { helpMessageInConsole, errorMessageInConsole } = require('./lib/utils');
+
+const { initRedux } = require('./lib/controllers/init-redux');
+const { initReduxEntity } = require('./lib/controllers/init-redux-entity');
 
 const runScript = async (argv) => {
   console.log('argv', argv);
   const command = argv[0];
   switch (command) {
-    case 'init-redux':
-      const rs_folder = await inquirer.askFolderNameForReduxStore(
-        defaultStoreFolder,
-      );
-      const init_saga = await inquirer.askIncludeSaga(defaultSagaFolder);
-
-      const init_dirs = await manager({ ...rs_folder, ...init_saga });
-
-      clear();
-      successMessageInConsole(init_dirs, command);
+    case INIT_REDUX:
+      await initRedux(INIT_REDUX);
       break;
-    case 'init-entity':
-      const entity_name = await inquirer.askEntityName();
-      const crud = await inquirer.askCRUD();
-      const rs_entity_folder = await inquirer.askFolderNameForReduxStore(
-        defaultStoreFolderEntity,
-      );
-      const sagas = await inquirer.askIncludeSaga(defaultSagaFolderEntity);
-
-      const entity_dirs = await entityManager({
-        ...entity_name,
-        ...crud,
-        ...rs_entity_folder,
-        ...sagas,
-      });
-
-      clear();
-      successMessageInConsole(entity_dirs, command);
+    case INIT_ENTITY:
+      await initReduxEntity(INIT_ENTITY);
       break;
 
     case 'help': {
@@ -63,6 +31,6 @@ const runScript = async (argv) => {
     }
   }
 };
-clear();
 
+clear();
 runScript(process.argv.slice(2));
