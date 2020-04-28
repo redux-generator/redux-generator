@@ -128,7 +128,7 @@ folder name /
   ├─ actions.ts
   ├─ reducer.ts
   ├─ types.ts
-	├─ model.ts
+  ├─ model.ts
   └─ saga.ts
 ```
 </details>
