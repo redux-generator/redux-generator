@@ -22,14 +22,13 @@ const runScript = async (argv) => {
   // console.log('stderr:', lol);
 
   console.log('argv', argv);
-  console.log('isDev', process.env.NODE_ENV);
   const command = argv[0];
   switch (command) {
     case INIT_REDUX:
       await initRedux(INIT_REDUX);
       break;
     case INIT_ENTITY:
-      await initReduxEntity(INIT_ENTITY);
+      await initReduxEntity(argv);
       break;
 
     case 'help': {
