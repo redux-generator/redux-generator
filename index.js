@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+require('dotenv').config();
 const clear = require('clear');
 const path = require('path');
 
@@ -20,6 +21,7 @@ const {
 } = require('./lib/constants');
 
 const runScript = async (argv) => {
+  console.log('argv', argv);
   const command = argv[0];
   switch (command) {
     case 'init-redux':
@@ -61,6 +63,6 @@ const runScript = async (argv) => {
     }
   }
 };
-
 clear();
+
 runScript(process.argv.slice(2));

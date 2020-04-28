@@ -1,9 +1,10 @@
 {
   "name": "redux-template-generator",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "env NODE_ENV=development node .",
     "prettier": "prettier --write './bin/**/*.js' --config ./.prettierrc"
   },
   "keywords": [
@@ -19,6 +20,7 @@
   "dependencies": {
     "chalk": "^3.0.0",
     "clear": "^0.1.0",
+    "dotenv": "^8.2.0",
     "ejs": "^3.0.2",
     "inquirer": "^7.1.0",
     "touch": "^3.1.0"
