@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "env NODE_ENV=development node .",
+    "lint:init": "eslint -- --init",
+    "lint:fix": "eslint ./lib --fix",
     "prettier": "prettier --write './bin/**/*.js' --config ./.prettierrc"
   },
   "keywords": [
@@ -26,6 +28,9 @@
     "touch": "^3.1.0"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
     "prettier": "^2.0.2"
   }
 }
