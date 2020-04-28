@@ -1,8 +1,13 @@
 {
   "name": "redux-template-generator",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "",
-  "main": "index.js",
+	"main": "index.js",
+	"homepage": "https://github.com/redux-generator/redux-generator.git#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redux-generator/redux-generator.git"
+  },
   "scripts": {
     "dev": "env NODE_ENV=development node .",
     "lint:init": "eslint -- --init",

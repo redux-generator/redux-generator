@@ -133,6 +133,7 @@ folder name /
 ```
 </details>
 
+After just connect your new `reducer` to `global-reducer`, and connect saga if exist.
 
 
 ## Contribute
