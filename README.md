@@ -7,7 +7,7 @@ This package will generated all redux flow with typescript(optional).
 ## Installation
 
 ```sh
-# install globally
+# install globally (for some cases need add sudo before command)
 npm install --global redux-template-generator
 
 # or locally
@@ -62,7 +62,7 @@ store folder name /
 # globally
 gen-redux init-redux --ts or gen-redux init-redux --typescript
 # locally
-npm run gen-redux init-redux --ts or npm run gen-redux init-redux --typescript
+npm run gen-redux init-redux -- --ts or npm run gen-redux init-redux -- --typescript
 ```
 
 It will generate (redux-saga is optional):
@@ -118,7 +118,7 @@ folder name /
 # globally
 gen-redux init-entity --ts or gen-redux init-entity --typescript
 # locally
-npm run gen-redux init-entity --ts or npm run gen-redux init-entity --typescript
+npm run gen-redux init-entity -- --ts or npm run gen-redux init-entity -- --typescript
 ```
 
 It will generate (redux-saga is optional):
@@ -132,6 +132,7 @@ folder name /
   └─ saga.ts
 ```
 </details>
+
 
 After just connect your new `reducer` to `global-reducer`, and connect saga if exist.
 
