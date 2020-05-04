@@ -14,7 +14,7 @@ This Package:
 ## Installation
 
 ```sh
-# install globally (for some cases you'll need to add sudo before the command)
+# install globally (for some cases you will need to add sudo before the command)
 npm install --global redux-template-generator
 
 # or locally
@@ -23,7 +23,7 @@ npm install redux-template-generator
 
 ## Usage
 
-If you install this package locally you'll need to add a new script to `scripts` field in `package.json`
+If you install this package locally you will need to add a new script to `scripts` field in `package.json`
 
 ```json
 {
