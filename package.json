@@ -1,6 +1,6 @@
 {
   "name": "redux-template-generator",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "",
 	"main": "index.js",
 	"homepage": "https://github.com/redux-generator/redux-generator.git#readme",
@@ -18,7 +18,8 @@
   "keywords": [
     "redux",
     "redux-saga",
-    "typescript"
+		"typescript",
+		"jest"
   ],
   "author": "",
   "license": "MIT",
