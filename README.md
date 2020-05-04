@@ -1,8 +1,15 @@
 ## redux-template-generator
 
-Simple way for init redux code in your project. Includes redux-saga (optional).
+Simple way for init redux code in your project. 
 
-This package will generated all redux flow with typescript(optional).
+Package includes: 
+
+- Generation all redux flow
+- Generation tests (according a [official documentation](https://redux.js.org/recipes/writing-tests))
+- Generation redux-saga code flow (optional)
+- Generation entity code for redux
+- All files can be with `.ts` or `.js` extension (`js` is default)
+
 
 ## Installation
 
@@ -26,7 +33,7 @@ If you install package locally you need add new script to `scripts` field in `pa
 }
 ```
 
-For init redux, in root directory of your project, run:
+###For init redux, in root directory of your project, run:
 
 <details>
     <summary>JavaScript only</summary>
@@ -44,7 +51,9 @@ It will generate (redux-saga is optional):
 store folder name /
   ├─ authenticate /
   │  ├─ actions.js
+  │  ├─ action.test.js
   │  ├─ reducer.js
+  │  ├─ reducer.test.js
   │  ├─ types.js
   │  └─ saga.js
   ├─ index.js
@@ -71,7 +80,9 @@ It will generate (redux-saga is optional):
 store folder name /
   ├─ authenticate /
   │  ├─ actions.ts
+  │  ├─ action.test.ts
   │  ├─ reducer.ts
+  │  ├─ reducer.test.ts
   │  ├─ model.ts
   │  ├─ types.ts
   │  └─ saga.ts
@@ -87,7 +98,7 @@ store folder name /
 After just connect `authenticate/reducer` to `global-reducer`, and connect store itself to `Provider`.
 
 
-For init some entity, in root directory of your project, run:
+###For init some entity, in root directory of your project, run:
 
 <details>
     <summary>JavaScript only</summary>
@@ -104,7 +115,9 @@ It will generate (redux-saga is optional):
 ```sh
 folder name /
   ├─ actions.js
+  ├─ action.test.js
   ├─ reducer.js
+  ├─ reducer.test.js
   ├─ types.js
   └─ saga.js
 ```
@@ -126,7 +139,9 @@ It will generate (redux-saga is optional):
 ```sh
 folder name /
   ├─ actions.ts
+  ├─ action.test.ts
   ├─ reducer.ts
+  ├─ reducer.test.ts
   ├─ types.ts
   ├─ model.ts
   └─ saga.ts
