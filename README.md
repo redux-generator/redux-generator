@@ -33,7 +33,7 @@ If you install package locally you need add new script to `scripts` field in `pa
 }
 ```
 
-###For init redux, in root directory of your project, run:
+### For init redux, in root directory of your project, run:
 
 <details>
     <summary>JavaScript only</summary>
@@ -98,7 +98,7 @@ store folder name /
 After just connect `authenticate/reducer` to `global-reducer`, and connect store itself to `Provider`.
 
 
-###For init some entity, in root directory of your project, run:
+### For init some entity, in root directory of your project, run:
 
 <details>
     <summary>JavaScript only</summary>
