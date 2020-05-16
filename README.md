@@ -1,20 +1,20 @@
 ## redux-template-generator
 
-Simple way for init redux code in your project. 
+Simple way to initialize redux code in your project. 
 
-Package includes: 
+This Package: 
 
-- Generation all redux flow
-- Generation tests (according a [official documentation](https://redux.js.org/recipes/writing-tests))
-- Generation redux-saga code flow (optional)
-- Generation entity code for redux
-- All files can be with `.ts` or `.js` extension (`js` is default)
+- Generates all redux flow
+- Generates tests (according to [official documentation](https://redux.js.org/recipes/writing-tests))
+- Generates redux-saga code flow (optional)
+- Generates entity code for redux
+- All files can be generated with `.ts` or `.js` extension (`js` is default)
 
 
 ## Installation
 
 ```sh
-# install globally (for some cases need add sudo before command)
+# install globally (for some cases you will need to add sudo before the command)
 npm install --global redux-template-generator
 
 # or locally
@@ -23,7 +23,7 @@ npm install redux-template-generator
 
 ## Usage
 
-If you install package locally you need add new script to `scripts` field in `package.json`
+If you install this package locally you will need to add a new script to `scripts` field in `package.json`
 
 ```json
 {
@@ -33,10 +33,10 @@ If you install package locally you need add new script to `scripts` field in `pa
 }
 ```
 
-### For init redux, in root directory of your project, run:
+### To initialize redux, in root directory of your project, run:
 
 <details>
-    <summary>JavaScript only</summary>
+    <summary>For plain JavaScript</summary>
 
 ```sh
 # globally
@@ -65,7 +65,7 @@ store folder name /
 
 
 <details>
-    <summary>With Typescript</summary>
+    <summary>Or with Typescript</summary>
 
 ```sh
 # globally
@@ -95,13 +95,13 @@ store folder name /
 </details>
 
 
-After just connect `authenticate/reducer` to `global-reducer`, and connect store itself to `Provider`.
+Then simply connect `authenticate/reducer` to `global-reducer`, and connect store itself to the `Provider`.
 
 
-### For init some entity, in root directory of your project, run:
+### To initialize some entity, in root directory of your project, run:
 
 <details>
-    <summary>JavaScript only</summary>
+    <summary>For plain JavaScript</summary>
 
 ```sh
 # globally
@@ -125,7 +125,7 @@ folder name /
 
 
 <details>
-    <summary>With Typescript</summary>
+    <summary>Or with Typescript</summary>
 
 ```sh
 # globally
@@ -149,7 +149,7 @@ folder name /
 </details>
 
 
-After just connect your new `reducer` to `global-reducer`, and connect saga if exist.
+Then simply connect your new `reducer` to `global-reducer`, and connect saga if it exists.
 
 
 ## Contribute
