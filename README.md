@@ -52,6 +52,7 @@ store folder name /
   ├─ authenticate /
   │  ├─ actions.js
   │  ├─ action.test.js
+  │  ├─ api.js
   │  ├─ reducer.js
   │  ├─ reducer.test.js
   │  ├─ types.js
@@ -81,6 +82,7 @@ store folder name /
   ├─ authenticate /
   │  ├─ actions.ts
   │  ├─ action.test.ts
+  │  ├─ api.ts
   │  ├─ reducer.ts
   │  ├─ reducer.test.ts
   │  ├─ model.ts
@@ -116,6 +118,7 @@ It will generate (redux-saga is optional):
 folder name /
   ├─ actions.js
   ├─ action.test.js
+  ├─ api.js
   ├─ reducer.js
   ├─ reducer.test.js
   ├─ types.js
@@ -140,6 +143,7 @@ It will generate (redux-saga is optional):
 folder name /
   ├─ actions.ts
   ├─ action.test.ts
+  ├─ api.ts
   ├─ reducer.ts
   ├─ reducer.test.ts
   ├─ types.ts
