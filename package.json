@@ -1,9 +1,9 @@
 {
   "name": "redux-template-generator",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "",
-	"main": "index.js",
-	"homepage": "https://github.com/redux-generator/redux-generator.git#readme",
+  "main": "index.js",
+  "homepage": "https://github.com/redux-generator/redux-generator.git#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/redux-generator/redux-generator.git"
@@ -11,15 +11,16 @@
   "scripts": {
     "dev": "env NODE_ENV=development node .",
     "lint:init": "eslint -- --init",
-		"lint:fix": "eslint ./lib --fix",
-		"convert": "node lib/utils/convertToJSON.js",
-    "prettier": "prettier --write './bin/**/*.js' --config ./.prettierrc"
+    "lint:fix": "eslint ./lib --fix",
+    "convert:json": "node lib/utils/convertToJSON.js",
+    "convert:ejs": "node lib/utils/convertToEJS.js",
+    "prettier": "prettier --write './lib/**/*.js' --config ./.prettierrc"
   },
   "keywords": [
     "redux",
     "redux-saga",
-		"typescript",
-		"jest"
+    "typescript",
+    "jest"
   ],
   "author": "",
   "license": "MIT",
